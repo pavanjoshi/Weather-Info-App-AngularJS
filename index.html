@@ -1,0 +1,22 @@
+<!doctype html>
+<html ng-app="project">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular-route.min.js"></script>
+    <script src="app.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  </head>
+  <body class="container">
+  <h2> Cities </h2>
+  <div ng-controller="CityListController">
+  <div class="list-group">
+  <a class="list-group-item" data="{{city.name}}" ng-repeat="city in cityList | orderBy:'name'" ng-click="loadWeather(city.name)">{{city.name}}</a>
+  </tr>
+  </div>
+  <div class="resultCity"></div>
+<div class="result"></div>
+  </div>
+  </body>
+</html>
